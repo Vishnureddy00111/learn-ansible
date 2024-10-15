@@ -1,5 +1,6 @@
 - name: Demo on variable
   host: localhost
+  connection: local
   vars:
     URL: var.google.com
   tasks:
