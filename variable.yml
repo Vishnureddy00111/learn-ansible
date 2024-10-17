@@ -1,12 +1,8 @@
 - name: Demo on variable
-  host: localhost
-  connection: local
+  hosts: all
   vars:
-    URL: var.google.com
-  tasks:
-    -name: print URL
-    ansible.builtin.debug:
-      msg: URL - {{URL}}
-
-  ## here in the above msgs line,we have value starting with string url ,but if value string with variable the we need to quote it
-  #msg:"{{url}}",must and should double quotes if the value starts with variable in ansible
+    url: var.google.com
+    tasks:
+      - name: print URL
+        ansible.buitin.debbug:
+          msg: URL - {{ URL }}
