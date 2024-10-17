@@ -8,7 +8,7 @@
     - name: Enable Nginx 24 version
       ansible.builtin.shell: dnf module nginx:1.24 -y
 
-    - name: Install Nginx
+    - name: install nginx
       ansible.built.dnf:
         name: nginx
         state: present
