@@ -1,5 +1,1 @@
-- name: Demo Roles
-  hosts: localhost
-  connection: local
-  roles:
-    - sample
+URL: roles.example.com
