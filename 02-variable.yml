@@ -29,3 +29,29 @@
   connection: local
   roles:
     - sample
+
+# precedence means priority
+#1. CLI
+#2. TASKS
+#3. roles . vars
+#4. playbook - Play vars
+#5. Roles - defaults
+
+
+- name: Demo on register variable
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: check package
+      ansible.builtin.dnf:
+        name: zlib
+        state: installed
+        register: out
+
+    - name: print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
+
+
