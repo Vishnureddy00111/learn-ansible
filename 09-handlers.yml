@@ -1,6 +1,6 @@
 - name : Handlers
   host: localhost
-  connections: local
+  connection: local
   tasks:
     - name: Install zlib
       ansible.builtin.dnf:
