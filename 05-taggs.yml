@@ -12,3 +12,4 @@
           msg: Started Nginx
           tags:
             - service
+# if tag is not given ,then irrespective of any tag value that task will run debug.
